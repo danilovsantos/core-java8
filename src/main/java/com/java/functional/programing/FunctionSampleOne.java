@@ -2,11 +2,11 @@ package com.java.functional.programing;
 
 import java.util.function.Function;
 
-public class FunctionSample {
+public class FunctionSampleOne {
 
 	public static void main(String[] args) {
 		
-		FunctionSample f = new FunctionSample();
+		FunctionSampleOne f = new FunctionSampleOne();
 		
 		System.out.println(f.sleepIn(true, true));
 		System.out.println(f.sleepIn(false, false));
