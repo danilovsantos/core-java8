@@ -31,25 +31,25 @@ public class EmployeePredicates {
 		employees.add(new EmployeePredicates(4, 20, "João"));
 		employees.add(new EmployeePredicates(5, 50, "Tônio"));
 		
-		System.out.println(EmployeePredicates.filterEmployees(employees, isAdult()).toString());
-		System.out.println(EmployeePredicates.filterEmployees(employees, checkById(3)).toString());
-		System.out.println(EmployeePredicates.filterEmployees(employees, checkByName("João")).toString());
+		System.out.println(filterEmployees(employees, isAdult()).toString());
+		System.out.println(filterEmployees(employees, checkById(3)).toString());
+		System.out.println(filterEmployees(employees, checkByName("João")).toString());
 		
 	}
 	
-	public static Predicate<EmployeePredicates> isAdult(){
+	private static Predicate<EmployeePredicates> isAdult(){
 		return e -> e.getAge() > 18;
 	}
 	
-	public static Predicate<EmployeePredicates> checkById(Integer id){
+	private static Predicate<EmployeePredicates> checkById(Integer id){
 		return e -> e.getId() == id;
 	}
 	
-	public static Predicate<EmployeePredicates> checkByName(String name){
+	private static Predicate<EmployeePredicates> checkByName(String name){
 		return e -> e.getName().equals(name);
 	}
 	
-	public static List<EmployeePredicates> filterEmployees(List<EmployeePredicates> employees, Predicate<EmployeePredicates> predicate){
+	private static List<EmployeePredicates> filterEmployees(List<EmployeePredicates> employees, Predicate<EmployeePredicates> predicate){
 		return employees.stream().filter(predicate).collect(Collectors.<EmployeePredicates>toList());
 	}
 		
