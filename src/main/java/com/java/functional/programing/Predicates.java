@@ -7,15 +7,15 @@ import java.util.stream.Collectors;
 
 //http://howtodoinjava.com/java-8/how-to-use-predicate-in-java-8/
 
-public class EmployeePredicates {
+public class Predicates {
 
 	private Integer id;
 	private Integer age;
 	private String name;
 	
-	public EmployeePredicates(){}
+	public Predicates(){}
 	
-	public EmployeePredicates(Integer id, Integer age, String name){
+	public Predicates(Integer id, Integer age, String name){
 		this.id = id;
 		this.age = age;
 		this.name = name;
@@ -23,13 +23,13 @@ public class EmployeePredicates {
 	
 	public static void main(String[]args){
 		
-		List<EmployeePredicates> employees = new ArrayList<EmployeePredicates>();
+		List<Predicates> employees = new ArrayList<Predicates>();
 		
-		employees.add(new EmployeePredicates(1, 30, "Fulano"));
-		employees.add(new EmployeePredicates(2, 17, "Ciclano"));
-		employees.add(new EmployeePredicates(3, 15, "Zé"));
-		employees.add(new EmployeePredicates(4, 20, "João"));
-		employees.add(new EmployeePredicates(5, 50, "Tônio"));
+		employees.add(new Predicates(1, 30, "Fulano"));
+		employees.add(new Predicates(2, 17, "Ciclano"));
+		employees.add(new Predicates(3, 15, "Zé"));
+		employees.add(new Predicates(4, 20, "João"));
+		employees.add(new Predicates(5, 50, "Tônio"));
 		
 		System.out.println(filterEmployees(employees, isAdult()).toString());
 		System.out.println(filterEmployees(employees, checkById(3)).toString());
@@ -37,20 +37,20 @@ public class EmployeePredicates {
 		
 	}
 	
-	private static Predicate<EmployeePredicates> isAdult(){
+	private static Predicate<Predicates> isAdult(){
 		return e -> e.getAge() > 18;
 	}
 	
-	private static Predicate<EmployeePredicates> checkById(Integer id){
+	private static Predicate<Predicates> checkById(Integer id){
 		return e -> e.getId() == id;
 	}
 	
-	private static Predicate<EmployeePredicates> checkByName(String name){
+	private static Predicate<Predicates> checkByName(String name){
 		return e -> e.getName().equals(name);
 	}
 	
-	private static List<EmployeePredicates> filterEmployees(List<EmployeePredicates> employees, Predicate<EmployeePredicates> predicate){
-		return employees.stream().filter(predicate).collect(Collectors.<EmployeePredicates>toList());
+	private static List<Predicates> filterEmployees(List<Predicates> employees, Predicate<Predicates> predicate){
+		return employees.stream().filter(predicate).collect(Collectors.<Predicates>toList());
 	}
 		
 	public Integer getId() {

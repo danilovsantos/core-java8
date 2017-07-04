@@ -6,7 +6,7 @@ package com.java.functional.programing;
  */
 
 @FunctionalInterface
-public interface FunctionalInterfaceSample {
+public interface Interface {
 
 	public abstract void doSomething();
 	

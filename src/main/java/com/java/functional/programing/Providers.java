@@ -1,6 +1,6 @@
 package com.java.functional.programing;
 
-public class PredicateSample {
+public class Providers {
 
 	public static void main(String[] args) {		
 		

@@ -1,4 +1,4 @@
-package com.java.functional.programing;
+package com.java.io;
 
 import java.io.BufferedReader;
 import java.io.IOException;

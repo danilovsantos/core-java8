@@ -2,7 +2,7 @@ package com.java.functional.programing;
 
 import java.util.function.Function;
 
-public class FunctionSampleTwo {
+public class Functions {
 
 	private static int num = 0;
 	
@@ -21,7 +21,7 @@ public class FunctionSampleTwo {
 		
 		System.out.println("-----------------------");
 		
-		FunctionSampleTwo f = new FunctionSampleTwo();
+		Functions f = new Functions();
 		
 		System.out.println(num);
 		f.sumByone();

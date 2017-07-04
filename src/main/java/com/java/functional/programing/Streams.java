@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class StreamsExample {
+public class Streams {
 
 	public static void main(String[] args) {
 		
@@ -19,7 +19,7 @@ public class StreamsExample {
 		Stream<Integer> stream = numbers.stream();
 		
 		//stream.filter(t -> t > 2).forEach(i -> System.out.println(i));
-		stream.sorted((second,third) -> third - second).forEach(System.out::println);
+		stream.sorted((first,second) -> second - first).forEach(System.out::println);
 
 	}
 
