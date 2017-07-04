@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class ReadFileTestJava7 {
+public class ReadFileInJava7 {
 	
 	public static void main(String[]args){
 		
