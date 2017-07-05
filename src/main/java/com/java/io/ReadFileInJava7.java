@@ -20,7 +20,7 @@ public class ReadFileInJava7 {
 			System.out.println(Calendar.getInstance().getTimeInMillis());
 			System.out.println(Runtime.getRuntime().totalMemory());
 			
-			Path path = FileSystems.getDefault().getPath("C:/Users/dvsantos1/Desktop/mockdata.csv");
+			Path path = FileSystems.getDefault().getPath("C:/Users/dvsantos1/Desktop/mockaroo-data.csv");
 			InputStream is = Files.newInputStream(path);
 			BufferedReader br = new BufferedReader(new InputStreamReader(is));
 			
