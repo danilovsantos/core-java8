@@ -14,12 +14,10 @@ public class ReadFileWithStreamJava8 {
 	public static void readFile(){
 		
 		try{
-			
 			Stream<String> stm = Files.lines(Paths.get("C:/Users/dvsantos1/Desktop/mockaroo-data.csv"));
 			//stm.limit(3000000).collect(Collectors.<String>toList()).parallelStream();
-			stm.limit(3000000).collect(Collectors.<String>toList());
+			stm.limit(8000000).collect(Collectors.<String>toList());
 			stm.close();
-			
 		}catch (Exception e) {
 			e.printStackTrace();
 		}

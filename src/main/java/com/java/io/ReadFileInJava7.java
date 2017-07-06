@@ -8,7 +8,6 @@ import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 public class ReadFileInJava7 {
@@ -17,7 +16,6 @@ public class ReadFileInJava7 {
 		
 		try {
 			
-			System.out.println(Calendar.getInstance().getTimeInMillis());
 			System.out.println(Runtime.getRuntime().totalMemory());
 			
 			Path path = FileSystems.getDefault().getPath("C:/Users/dvsantos1/Desktop/mockaroo-data.csv");
@@ -32,7 +30,6 @@ public class ReadFileInJava7 {
 				lines.add(line);
 			}
 			
-			System.out.println(Calendar.getInstance().getTimeInMillis());
 			System.out.println(Runtime.getRuntime().totalMemory());
 			
 		} catch (IOException e) {
