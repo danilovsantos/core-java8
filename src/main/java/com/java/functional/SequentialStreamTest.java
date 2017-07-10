@@ -9,8 +9,9 @@ import java.util.List;
 import java.util.stream.Stream;
 
 import com.java.beans.Person;
+import com.java.predicates.PersonPredicates;
 
-public class Functions {
+public class SequentialStreamTest {
 
 	public static void main(String[]args){
 		
@@ -32,6 +33,14 @@ public class Functions {
 						    columns[4]));
 			}
 			
+			Stream<Person> ps = persons.stream();
+			
+			ps.filter(PersonPredicates.ageUnder18())
+			  .filter(PersonPredicates.onlyFemale())
+			  .filter(PersonPredicates.nameStartWith("M"))
+			  .filter(PersonPredicates.liveIn("Ban Phaeo"))
+			  .limit(1000000);
+		      //.forEach(i -> System.out.println(i.toString()));
 			
 			stream.close();
 			

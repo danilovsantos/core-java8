@@ -10,8 +10,8 @@ public class PersonPredicates {
 	 * Retorna menores de idade.
 	 * @return
 	 */
-	public Predicate<Person> underAge(){
-		return p -> p.getAge() > 18;
+	public static Predicate<Person> ageUnder18(){
+		return p -> p.getAge() < 18;
 	}
 	
 	
@@ -19,8 +19,8 @@ public class PersonPredicates {
 	 * Retorna maiores de idade.
 	 * @return
 	 */
-	public Predicate<Person> ageOver18(){
-		return p -> p.getAge() == 18;
+	public static Predicate<Person> ageOver18(){
+		return p -> p.getAge() >= 18;
 	}
 	
 	
@@ -29,7 +29,7 @@ public class PersonPredicates {
 	 * @param maxAge
 	 * @return
 	 */
-	public Predicate<Person> ageGreaterThen(Integer maxAge){
+	public static Predicate<Person> ageGreaterThen(Integer maxAge){
 		return p -> p.getAge() > maxAge;
 	}
 	
@@ -39,7 +39,7 @@ public class PersonPredicates {
 	 * @param city
 	 * @return
 	 */
-	public Predicate<Person> liveIn(String city){
+	public static Predicate<Person> liveIn(String city){
 		return p -> p.equals(city);
 	}
 	
@@ -48,7 +48,7 @@ public class PersonPredicates {
 	 * Retorna somente homens.
 	 * @return
 	 */
-	public Predicate<Person> onlyMale(){
+	public static Predicate<Person> onlyMale(){
 		return p -> p.getGender().equals("Male");
 	}
 	
@@ -57,7 +57,7 @@ public class PersonPredicates {
 	 * Retorna somente mulheres.
 	 * @return
 	 */
-	public Predicate<Person> onlyFamale(){
+	public static Predicate<Person> onlyFemale(){
 		return p -> p.getGender().equals("Female");
 	}
 	
@@ -67,7 +67,7 @@ public class PersonPredicates {
 	 * @param letter
 	 * @return
 	 */
-	public Predicate<Person> nameStartWith(String letter){
+	public static Predicate<Person> nameStartWith(String letter){
 		return p -> p.getName().startsWith(letter);
 	}
 
