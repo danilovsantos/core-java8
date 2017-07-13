@@ -12,6 +12,10 @@ public class Person {
 	
 	public Person(){}
 	
+	public Person(String name){
+		this.name = name;
+	}
+	
 	public Person(String name, Integer age, LocalDate birthdate, String gender, String city){
 		this.name = name;
 		this.age = age;

@@ -27,8 +27,7 @@ public class SequentialStreamTest {
 				
 				persons.add(new Person(columns[0], 
 						    new Integer(columns[1]), 
-						    LocalDate.parse(columns[2], 
-						    DateTimeFormatter.ofPattern("dd/MM/yyyy")), 
+						    LocalDate.parse(columns[2], DateTimeFormatter.ofPattern("dd/MM/yyyy")), 
 						    columns[3], 
 						    columns[4]));
 			}
