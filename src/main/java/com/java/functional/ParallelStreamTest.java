@@ -2,7 +2,9 @@ package com.java.functional;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +18,8 @@ public class ParallelStreamTest {
 public static void main(String[]args){
 		
 		try{
+			
+			LocalDateTime from = LocalDateTime.now() ;
 			
 			List<Person> persons = new ArrayList<Person>();
 			Stream<String> stream = Files.lines(Paths.get("C:/Users/dvsantos1/Desktop/persons.csv"));
@@ -43,6 +47,8 @@ public static void main(String[]args){
 		      //.forEach(i -> System.out.println(i.toString()));
 			
 			stream.close();
+		
+			System.out.println(Duration.between(from, LocalDateTime.now()).getSeconds());
 			
 		}catch (Exception e) {
 			e.printStackTrace();

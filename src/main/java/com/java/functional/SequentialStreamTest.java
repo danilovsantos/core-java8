@@ -18,7 +18,7 @@ public class SequentialStreamTest {
 		try{
 			
 			List<Person> persons = new ArrayList<Person>();
-			Stream<String> stream = Files.lines(Paths.get("C:/Users/dvsantos1/Desktop/persons.csv"));
+			Stream<String> stream = Files.lines(Paths.get("C:/Users/dvsantos1/Desktop/mockaroo-data.csv"));
 			String[] array = stream.toArray(l -> new String[l]);
 			
 			for(String line : array){

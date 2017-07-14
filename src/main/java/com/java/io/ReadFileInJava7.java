@@ -25,15 +25,18 @@ public class ReadFileInJava7 {
 			List<String> lines = new ArrayList<String>();
 			
 			String line = null;
-			
+
 			while((line = br.readLine()) != null){
 				lines.add(line);
+				System.out.println(line);
 			}
 			
 			System.out.println(Runtime.getRuntime().totalMemory());
 			
 		} catch (IOException e) {
 			e.printStackTrace();
+		}finally {
+			System.out.println("fim");
 		}
 		
 	}
