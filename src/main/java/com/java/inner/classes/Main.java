@@ -10,6 +10,13 @@ public class Main {
 		gb.printGearBoxNum();
 		g.printGearNum();
 		
+		new GearBox.GearInterface(){
+			@Override
+			public void useIt(int num){
+				System.out.println("use: "+num);
+			}
+		};
+		
 	}
 
 }

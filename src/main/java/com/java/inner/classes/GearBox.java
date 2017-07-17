@@ -46,5 +46,9 @@ public class GearBox {
 		
 	}
 	
+	public interface GearInterface {
+		public void useIt(int num);
+	}
+	
 	
 }
