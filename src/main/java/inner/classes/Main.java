@@ -1,4 +1,4 @@
-package com.java.inner.classes;
+package inner.classes;
 
 public class Main {
 

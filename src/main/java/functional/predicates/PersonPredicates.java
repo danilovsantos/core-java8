@@ -1,8 +1,8 @@
-package com.java.predicates;
+package functional.predicates;
 
 import java.util.function.Predicate;
 
-import com.java.beans.Person;
+import beans.Person;
 
 public class PersonPredicates {
 

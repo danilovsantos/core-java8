@@ -1,10 +1,10 @@
-package com.java.functional;
+package functional;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import com.java.beans.Person;
+import beans.Person;
 
 public class FindFunctions {
 	

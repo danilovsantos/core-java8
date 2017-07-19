@@ -1,4 +1,4 @@
-package com.java.inner.classes;
+package inner.classes;
 
 public class GearBox {
 
@@ -20,7 +20,6 @@ public class GearBox {
 	public void setGearBoxNum(int gearBoxNum) {
 		this.gearBoxNum = gearBoxNum;
 	}
-
 
 	public class Gear{
 		
@@ -49,6 +48,5 @@ public class GearBox {
 	public interface GearInterface {
 		public void useIt(int num);
 	}
-	
 	
 }

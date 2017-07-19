@@ -1,4 +1,4 @@
-package com.java.functional;
+package functional.predicates;
 
 import java.util.ArrayList;
 import java.util.List;

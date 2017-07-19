@@ -1,4 +1,4 @@
-package com.java.functional;
+package functional;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import com.java.beans.Person;
-import com.java.predicates.PersonPredicates;
+import beans.Person;
+import functional.predicates.PersonPredicates;
 
 public class ParallelStreamTest {
 

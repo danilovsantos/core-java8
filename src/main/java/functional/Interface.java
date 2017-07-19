@@ -1,4 +1,4 @@
-package com.java.functional;
+package functional;
 
 /**
  * Functional interface in according of SAM concept.
